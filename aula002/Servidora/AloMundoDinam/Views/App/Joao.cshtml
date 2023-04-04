@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+    var rand = new Random();
+    int qtd = rand.Next(20);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href=""/>
+    <title>João</title>
+</head>
+<body>
+    <h1>Alo mundo</h1>
+    @for (int i = 0; i <= qtd; i++)
+    {
+    <p>@i</p>
+        
+    }
+
+</body>
+</html>

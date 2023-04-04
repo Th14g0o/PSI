@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebAppProjetoB2023.Models.Categoria>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8"/>
+    <title>Index</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+        body > p{
+            width: 100%;
+        }
+        body{
+            background-color: black;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            flex-wrap:wrap;
+        }
+        a{
+            color: lime;
+        }
+        td, th{
+            padding: 0 0.2em;
+        }
+        th{
+            color: deepskyblue;
+        }
+        /*tr td:nth-child(1){
+            color: deepskyblue;
+        }*/
+    </style>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Nova Categoria", "Create")😎
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Detalhes", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /*id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
