@@ -1,0 +1,105 @@
+﻿@model WebAppProjetoB2023.Models.Categoria
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        h4 {
+            width: 100%;
+            font-size: 300%;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid lime;
+        }
+
+        body {
+            background-color: black;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+            flex-wrap: wrap;
+        }
+
+            body > div {
+                min-width: 100%;
+            }
+
+        a, h4 {
+            color: lime;
+        }
+
+        .form-group > label {
+            color: lime;
+            margin-right: 1em;
+            align-self: center;
+        }
+
+        .dados {
+            display: flex;
+        }
+
+            .dados input {
+                color: lime;
+                background-color: black;
+                border-color: lime;
+                text-align: start;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5em 2px;
+            }
+
+                .dados input:focus {
+                    outline: none;
+                }
+
+        .btn {
+            color: deepskyblue;
+            margin: 1em 0;
+            background-color: transparent;
+            border-color: deepskyblue;
+            padding: 0.2em 1em;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h4>Categoria</h4>
+       
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CategoriaId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
