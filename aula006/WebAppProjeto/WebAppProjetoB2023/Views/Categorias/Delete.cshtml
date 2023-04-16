@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>Delete</title>
     <style>
         * {
             margin: 0;
@@ -17,7 +17,10 @@
             color: white;
             text-align: center;
         }
-
+        h3{
+            width: 100%;
+            color: deeppink;
+        }
         h4 {
             width: 100%;
             font-size: 300%;
@@ -33,6 +36,7 @@
             align-content: center;
             flex-wrap: wrap;
         }
+
         body > p {
             min-width: 100%;
             display: flex;
@@ -40,40 +44,50 @@
             align-content: center;
             flex-wrap: wrap;
         }
-        body > p > span{
+
+        form div > span {
             margin: 0 1em;
         }
 
         body > div {
             padding: 1em;
             margin: 0 auto;
+            
         }
 
         a, h4 {
             color: lime;
         }
-        dl{
+
+        dl {
             display: flex;
             flex-wrap: wrap;
-
+            margin-bottom: 1em;
         }
-        dt, dd{
+
+        dt, dd {
             color: deepskyblue;
         }
-        dt{
+
+        dt {
             margin-right: 1em;
         }
-      
+        .btn{
+            color: red;
+            border-color: red;
+            background-color: transparent;
+            padding: 0.3em;
+        }
     </style>
-
 </head>
 <body>
+    <h3>Certeza que deseja apagar isto?</h3>
     <div>
         <h4>Categoria</h4>
-       
+      
         <dl class="dl-horizontal">
             <dt>
-                @Html.DisplayNameFor(model => model.Nome) :
+                @Html.DisplayNameFor(model => model.Nome)
             </dt>
 
             <dd>
@@ -81,11 +95,18 @@
             </dd>
 
         </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.CategoriaId)
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Deletar" class="btn btn-default" /> 
+                <span>|</span>
+                @Html.ActionLink("Voltar ao inicio", "Index")
+            </div>
+        }
     </div>
-    <p>
-        @Html.ActionLink("Editar", "Edit", new { id = Model.CategoriaId }) 
-        <span>|</span>
-        @Html.ActionLink("Voltar ao inicio", "Index")
-    </p>
 </body>
 </html>

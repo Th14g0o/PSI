@@ -24,8 +24,7 @@
         }
 
         body {
-            background-color: black;
-            padding: 1em;
+            background-image: linear-gradient(to left top, black, black, darkgreen);
             display: flex;
             justify-content: center;
             align-content: center;
@@ -48,7 +47,7 @@
 </head>
 <body>
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Criar nova categoria", "Create")
     </p>
     <table class="table">
         <tr>
@@ -64,9 +63,9 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.CategoriaId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.CategoriaId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.CategoriaId })
+                @Html.ActionLink("Editar", "Edit", new { id=item.CategoriaId }) |
+                @Html.ActionLink("Detalhes", "Details", new { id=item.CategoriaId }) |
+                @Html.ActionLink("Deletar", "Delete", new { id=item.CategoriaId })
             </td>
         </tr>
     }

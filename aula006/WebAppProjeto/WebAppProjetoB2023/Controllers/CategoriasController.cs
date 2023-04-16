@@ -40,6 +40,18 @@ namespace WebAppProjetoB2023.Controllers
         {
             return View(categorias.Where(m => m.CategoriaId == id).First());
         }
+        public ActionResult Delete(long id)
+        {
+            return View(categorias.Where(t => t.CategoriaId == id).First());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(Categoria categoria)
+        {
+            categorias.Remove(categorias.Where(ct => ct.CategoriaId ==  categoria.CategoriaId).First());
+            return RedirectToAction("Index");
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -57,9 +69,6 @@ namespace WebAppProjetoB2023.Controllers
             categorias.Remove(categorias.Where(c => c.CategoriaId == categoria.CategoriaId).First());
             categorias.Add(categoria);
             return RedirectToAction("Index");
-
-
-
         }
     }
 }
