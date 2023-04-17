@@ -1,0 +1,118 @@
+﻿@model WebAppProjetoB2023.Models.Categoria
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        h4 {
+            width: 100%;
+            font-size: 300%;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid lime;
+        }
+
+        body {
+            background-image: linear-gradient(to left top, black, black, darkgreen);
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+            flex-wrap: wrap;
+        }
+
+        body > div {
+            min-width: 100%;
+        }
+
+        a, h4 {
+            color: lime;
+        }
+
+        .form-group > label {
+            color: lime;
+            margin-right: 1em;
+            align-self: center;
+        }
+
+        .dados {
+            display: flex;
+        }
+
+        .dados input {
+            color: lime;
+            background-color: black;
+            border-color: lime;
+            text-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5em 2px;
+        }
+
+        .dados input:focus {
+            outline: none;
+        }
+
+        .btn {
+            color: deepskyblue;
+            margin: 1em 0;
+            background-color: transparent;
+            border-color: deepskyblue;
+            padding: 0.2em 1em;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+    
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+
+        
+        <div class="form-horizontal">
+            <h4>Categoria</h4>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group dados">
+                @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>
