@@ -57,8 +57,16 @@ namespace WebAppProjetoB2023.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Categoria categoria)
         {
-            categoria.CategoriaId = categorias.Select(m => m.CategoriaId).Max() + 1;
-            categorias.Add(categoria);
+            try
+            {
+                categoria.CategoriaId = categorias.Select(m => m.CategoriaId).Max() + 1;
+                categorias.Add(categoria);
+            }
+            catch
+            {
+                categoria.CategoriaId = 1;
+                categorias.Add(categoria);
+            }
             return RedirectToAction("Index");
         }
 
