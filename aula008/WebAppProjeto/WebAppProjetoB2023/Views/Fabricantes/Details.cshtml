@@ -1,0 +1,92 @@
+﻿@model WebAppProjetoB2023.Models.Fabricante
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        h4 {
+            width: 100%;
+            font-size: 300%;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid lime;
+        }
+
+        body {
+            background-image: linear-gradient(to left top, black, black, darkgreen);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        body > p {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        body > p > span {
+            margin: 0 1em;
+        }
+
+        body > div {
+            padding: 1em;
+            margin: 0 auto;
+        }
+
+        a, h4 {
+            color: lime;
+        }
+
+        dl {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        dt, dd {
+            color: deepskyblue;
+        }
+
+        dt {
+            margin-right: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>Fabricante</h4>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nome)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nome)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.FabricanteId }) 
+        <span>|</span>
+        @Html.ActionLink("Voltar ao inicio", "Index")
+    </p>
+</body>
+</html>
