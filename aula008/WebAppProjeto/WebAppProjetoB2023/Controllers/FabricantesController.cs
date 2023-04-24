@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebAppProjetoB2023.Models;
 using System.Net; // pro " new HttpStatusCodeResult(HttpStatusCode.BadRequest) " funcionar
+using System.Data.Entity;
 
 namespace WebAppProjetoB2023.Controllers
 {
@@ -22,12 +23,12 @@ namespace WebAppProjetoB2023.Controllers
             return View();
         }
         public ActionResult Edit(long? id)
-        {
+        {//a interrogação indica que esse parametro não é obrigatorio
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Fabricante fabricante = context.Fabricantes.Find(id);
+            Fabricante fabricante = context.Fabricantes.Find(id);// se não achar retorna um valor nulo
             if (fabricante == null)
             {
                 return HttpNotFound();
@@ -73,9 +74,9 @@ namespace WebAppProjetoB2023.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Fabricante fabricante)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)//verifica se esse objeto foi preenchido corretamente
             {
-                context.Entry(fabricante).State = System.Data.Entity.EntityState.Modified;
+                context.Entry(fabricante).State = EntityState.Modified;//marca o objeto de forma que indique que seu estado esta alterado
                 context.SaveChanges();
                 return RedirectToAction("Index");
             }
