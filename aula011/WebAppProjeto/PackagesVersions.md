@@ -1,4 +1,4 @@
-# Versões
+# Versões baixadas
 + **BootStrap** 3.3.7 ou 3.3.6
 + **EntityFramework** 6.4.4 
 + **jQuery** 3.4.1 ou 2.4.4
