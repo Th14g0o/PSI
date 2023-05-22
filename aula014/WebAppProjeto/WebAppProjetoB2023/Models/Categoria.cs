@@ -10,5 +10,6 @@ namespace WebAppProjetoB2023.Models
         public long CategoriaId { get; set; }
         public string Nome { get; set; }
         public virtual ICollection<Produto> Produtos { get; set; }
+        //I relaciona ao conceito de interface. Assinatura nome e paremetros de um metodo
     }
 }

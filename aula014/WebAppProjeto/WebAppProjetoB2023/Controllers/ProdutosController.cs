@@ -9,6 +9,8 @@ using System.Net;
 
 namespace WebAppProjetoB2023.Controllers
 {
+    //MVC witch read/write ja cria o post com os http get e post
+    //
     public class ProdutosController : Controller
     {
         EFContext context = new EFContext();
