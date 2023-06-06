@@ -31,8 +31,12 @@ namespace WebAppProjetoB2023.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Categoria c = context.Categorias.Find(id);
+            //Categoria c = context.Categorias.Find(id); serve para retornar um unico objeto
             //acha a procura na tabela Categorias o id, e atribui essa categoria na variavel cc
+
+            Categoria c = context.Categorias.Where(cat => cat.CategoriaId == id).Include("Produtos.Fabricante").First();
+            //where retorna uma lista, o include inclui o produto e o seu fabricante nesta lista, o first funciona no where
+
             if (c == null)
             {
                 return HttpNotFound();
