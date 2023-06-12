@@ -22,8 +22,9 @@
                 {
                     <tr>
                         <td>
+                           
                             @Html.DisplayFor(modelItem => item.Nome)
-                            @Html.ActionLink("Produtos", "IndexComProdutosdoFabricante", "Homes", new { id = item.FabricanteId }, null) 
+                            @Html.ActionLink("Produtos", "IndexComProdutosdoFabricante", "Homes", new { id = item.FabricanteId })
                         </td>
                     </tr>
                 }
@@ -41,7 +42,7 @@
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Nome)
-                            
+
                         </td>
                     </tr>
                 }
