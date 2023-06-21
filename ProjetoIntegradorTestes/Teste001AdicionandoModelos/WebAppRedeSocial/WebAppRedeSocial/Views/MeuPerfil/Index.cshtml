@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/FeedComum.cshtml";
+}
+
+@Html.Partial("~/Views/Grupos/Grupos.cshtml")
+
+<div id="AreaDeFotoNome">
+    <figure>
+        <img src="~/img/FotoDoPerfil.png" alt="sua foto de perfil" />
+    </figure>
+    <div>
+        <p>Phfts10</p>
+        <span>Pedro Henrique</span>
+    </div>
+
+</div>
+<p id="BioDoPerfil">infoweb ❤/ ifrn</p>
+<ul id="NavDoTipo">
+    <li id="PostsTexto"><a href="@Url.Action("Textos", "MeuPerfil")">Textos</a></li>
+    <li class="TipoDePostSelecionado" id="PostsMidias"><a href="@Url.Action("Index", "MeuPerfil")">Midias</a></li>
+</ul>
+<ol id="Posts">
+    <li><a href="#"><img src="~/img/midia01.png" alt="Midia 001" /></a></li>
+    <li><a href="@Url.Action("PostagemDetalhadaMidias", "Postagens")"><img src="~/img/midia02.png" alt="Midia 002" /></a></li>
+    <li><a href="#"><img src="~/img/midia03.png" alt="Midia 003" /></a></li>
+</ol>
+
+@Html.Partial("~/Views/MeuPerfil/Amigos.cshtml")
+
+@section styles{
+    <link href="@Url.Content("~/estilos/perfil.css")" rel="stylesheet" />
+}
+@section ScriptPage {
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("PerfilIcone").classList.add("IconeFeedSelecionado");
+        }
+    </script>
+}

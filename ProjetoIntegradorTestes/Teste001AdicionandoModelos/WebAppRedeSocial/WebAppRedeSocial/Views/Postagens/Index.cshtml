@@ -1,0 +1,106 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/FeedComum.cshtml";
+}
+@Html.Partial("~/Views/Grupos/Grupos.cshtml")
+<ul id="PostsVisiveis">
+    <li><a href="javascript:Geral()" id="GeralAncora" class="PostsVisiveisNoFeed">Geral</a></li>
+    <li><a href="javascript:Amigos()" id="AmigosAncora">Amigos</a></li>
+</ul>
+<form id="PostVisiveisFeedForm">
+    <label>
+        <input type="radio" name="Visiveis" value="geral" id="FeedGeral" checked /> Geral
+    </label>
+    <label>
+        <input type="radio" name="Visiveis" value="amigos" id="FeedAmigos" /> Amigos
+    </label>
+</form>
+
+<div id="GrupoOuPostagem">
+    <div>
+        <div>
+            <h1 class="titulo">Criar</h1>
+            <button class="fechar"><a href="javascript:FecharEscolha()"><img src="~/img/FecharCriarIcone.png" alt="fechar" /></a></button>
+        </div>
+
+        <ol>
+            <li onclick="javascript:CriarPostagemModal()">
+                <figure>
+                    <img src="~/img/CriarPost.png" alt="icone post" />
+                </figure>
+                Nova Postagem
+            </li>
+            <li>
+                <figure>
+                    <img src="~/img/CriarGrupo.png" alt="icone grupo" />
+                </figure>
+
+                Novo grupo
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div id="CriarPostagem">
+    <div>
+        <h1>Criar Post</h1>
+        <button onclick="javascript:FecharPostagemModal()"><img src="~/img/FecharCriarIcone.png" alt="" /></button>
+        <div class="form-area">
+            <div>
+                <figure>
+                    <img src="~/img/CriarMidiaIcone.png" alt="">
+                </figure>
+                <button class="bt">Selecionar tipo</button>
+                <ol id="TiposDePost">
+                    <li><button>Midias</button></li>
+                    <li><button>Textos</button></li>
+                </ol>
+            </div>
+
+            <div>
+                <figure>
+                    <img src="~/img/FileIcone.png" alt="">
+                </figure>
+                <div>
+                    <div>
+                        <button class="bt" onclick="javascript:AbrirArquivos()">Selecionar midia</button>
+                        <span>*</span>
+                    </div>
+                    <span id="ImagemSelecionada">Foto:</span>
+
+                </div>
+
+            </div>
+
+            <div id="Inputs">
+                <h1>Descrição Da Postagem</h1>
+                <form action="#">
+                    <input required type="file" id="InputDaMidia" />
+                    <textarea></textarea>
+                    <input class="bt" type="submit" value="Publicar" />
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<button class="adcionar_publi"><a href="javascript:Escolha()"><img src="~/img/but adicionar.png" alt=""></a> </button>
+
+@Html.Partial("~/Views/MeuPerfil/Amigos.cshtml")
+
+@section styles{
+    <link href="@Url.Content("~/estilos/Home.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/estilos/modalCriar.css")" rel="stylesheet" />
+}
+@section ScriptPage {
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("HomeIcone").classList.add("IconeFeedSelecionado");
+        }
+    </script>
+    <script src="@Url.Content("~/scripts/PostsVisiveisNoFeed.js")"></script>
+    <script src="@Url.Content("~/scripts/Modais.js")"></script>
+
+}

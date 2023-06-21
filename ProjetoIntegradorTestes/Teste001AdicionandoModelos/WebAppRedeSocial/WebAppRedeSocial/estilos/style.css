@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+ul,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+main {
+    display: block;
+    width: 45%;
+    padding-top: 10px;
+    margin: 0 auto;
+    margin-top: 1.5em;
+}
+
+section#Conteudo {
+    padding-top: 2em;
+    padding: 0 1em;
+    /* V */
+    margin-top: 3em;
+}
+
+main nav {
+    padding: 0 1em;
+    position: fixed;
+    margin: 0 auto;
+    background-color: white;
+    width: 45%;
+    top: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    /* A */
+
+    padding-top: 10px;
+}
+
+ul#CaminhosPrincipais {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+header {
+    left: 0;
+    top: 0;
+    width: 50vh;
+    height: 100vh;
+    position: fixed;
+    border-right: 1px solid #217D00;
+    flex-direction: column;
+    /* V */
+    z-index: 3;
+}
+
+header #logo {
+    margin: 0 auto;
+    text-align: center;
+}
+
+header section {
+    padding-top: 100px;
+    width: 250px;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    margin: 0 auto;
+}
+
+header section h1 {
+    /* Nome grupo */
+
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000000;
+}
+
+header section p {
+    /* Mensagem grupo */
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #9b9b9b;
+}
+
+header section .grupos {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+header section .grupos:hover {
+    background-color: #29b100be;
+}
+
+header section .grupos:hover p {
+    color: white;
+}
+
+header section .grupos .icongrupo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #217D00;
+}
+
+header section .grupos .icongrupo img {
+    margin-top: 10px;
+}
+
+
+body .conta {
+    position: absolute;
+}
+
+body .contas {
+    position: fixed;
+    width: 50vh;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    border-left: 1px solid #217D00;
+    /* V */
+    z-index:2;
+}
+
+body .perfil .foto {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    top: 50px;
+}
+
+body .perfil .foto {
+    /* phfts10 */
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000000;
+}
+
+body .amigo {
+    top: 100px;
+}
+
+body .amigo {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 170px;
+    justify-content: space-between;
+}
+
+body .amigo h1 {
+    /* Sugestões para você */
+
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000000;
+}
+
+body .amigo h1 {
+    margin: 0 auto;
+}
+
+body .spv div {
+    display: flex;
+}
+
+body .spv {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body .spv p {
+    /* Leila */
+    margin-left: 25px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000000;
+}
+
+body .spv img {
+    width: 30px;
+}
+
+body .spv button {
+    background: #00A3FF;
+}
+
+body .spv button:hover {
+    background-color: #fff;
+    color: #00A3FF;
+}
+
+body .amigo button {
+    background: #3CE900
+}
+
+body .amigo button:hover {
+    color: #3CE900;
+    background-color: #fff;
+}
+
+body .spv button {
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    padding: 7px;
+    border-radius: 18px;
+    font-size: 11px;
+}
+
+#CaminhosPrincipais li {
+    border-bottom: 4px solid transparent;
+}
+#CaminhosPrincipais li:hover {
+    border-bottom: 4px solid #3CE900;
+}
+
+.IconeFeedSelecionado {
+    border-bottom: 4px solid #3CE900 !important;
+}

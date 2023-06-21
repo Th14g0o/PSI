@@ -1,0 +1,61 @@
+﻿
+
+@{
+    Layout = "~/Views/Compartilhado/HeadComum.cshtml";
+}
+
+<div class="logo">
+    <img src="~/img/logo.png" alt="Logo">
+</div>
+
+<div class="form-container">
+    <div>
+        <img src="~/img/CriarFotoDePerfilI.png" alt="Icone de perfil" />
+        <div>
+            <button onclick="javascript:AbrirArquivos()">Selecionar foto de perfil</button>
+            <span id="ImagemSelecionada">Foto:</span>
+        </div>
+    </div>
+
+    <form action="@Url.Action("Login", "MeuPerfil")">
+        <div class="form-group">
+            <input type="file" id="ColocarFotoDePerfil" />
+        </div>
+        <div class="form-group">
+            <input type="text" id="NomeIdentificador" required placeholder="Nome do perfil">
+            <p class="obrigatorio">*</p>
+        </div>
+        <div class="form-group">
+            <input type="text" id="NomeUsuario" required placeholder="Nome do Usuario">
+            <p class="obrigatorio">*</p>
+        </div>
+
+        <div class="form-group" id="dataNas">
+            <input type="date" id="NomeUsuario" required placeholder="Nome do Usuario">
+            <p class="obrigatorio">*</p>
+            <figure>
+                <img src="~/img/ToolTipData.png" alt="Duvida">
+                <figcaption id="ExplicaData">Forneça sua data de nascimento</figcaption>
+            </figure>
+
+
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="entrar" value="Seguir" />
+        </div>
+    </form>
+</div>
+
+
+@section styles{
+    <link href="@Url.Content("~/estilos/criarPerfil.css")" rel="stylesheet" />
+}
+@section ScriptPage {
+    <script src="@Url.Content("~/scripts/FormulariosDeEntrada.js")"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("EditarIcone").classList.add("IconeFeedSelecionado");
+        }
+    </script>
+}

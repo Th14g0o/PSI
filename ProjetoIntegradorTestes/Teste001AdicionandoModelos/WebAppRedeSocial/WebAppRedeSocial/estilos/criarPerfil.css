@@ -1,0 +1,132 @@
+.form-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 702px;
+    padding: 100px;
+    border: 1px solid #3CE900;
+    border-radius: 10px;
+    max-height: 618px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.form-group{
+    display: flex;
+    margin-bottom: 18px;
+
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+} 
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    font-size: 20px;
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #3CE900;
+    border-radius: 29px;
+    outline: none;
+}
+p.obrigatorio{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100% !important;
+    font-size: 20px;
+    margin: 0;
+    color:#00A3FF;
+}
+
+.logo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    max-width: 700px;
+    margin: 20px auto;
+    width: 600px;
+}
+
+#ColocarFotoDePerfil{
+    display: none;
+}
+.form-container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+.form-container > div div{
+    width: 100% ;
+    margin-left: 10px;
+}
+.form-container > div div button{
+    width: 100%;
+    padding: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #00A3FF;
+    color: white;
+    font-size: 100%;
+}
+.form-container > div div span{
+    color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="submit"]{
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #00A3FF; 
+    color: white;
+    cursor: pointer;
+    width: 500px;
+    padding: 25px;
+    border: none;
+    border-radius: 29px;
+    margin-top: 10px;
+    }
+
+#ExplicaData{
+    position: absolute;
+    visibility: hidden;
+    color: transparent;
+    background-color: transparent;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+}
+#dataNas input{
+    width: 50%;
+}
+
+#dataNas figure:hover{
+    cursor: pointer;
+}
+#dataNas figure:hover #ExplicaData{
+    visibility: visible !important;
+    color: white;
+    background-color: #3ae900c7;
+}
+
+input[type="date"]{
+    font-size: 20px;
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #3CE900;
+    border-radius: 29px;
+    outline: none;
+    color: #555555;
+    text-align: center;
+}

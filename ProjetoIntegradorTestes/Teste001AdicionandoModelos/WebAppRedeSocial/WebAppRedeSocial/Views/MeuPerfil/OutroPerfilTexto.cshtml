@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/FeedComum.cshtml";
+}
+
+@Html.Partial("~/Views/Grupos/Grupos.cshtml")
+
+<div id="AreaDeFotoNome">
+    <figure>
+        <img src="~/img/FotoDoPerfil.png" alt="sua foto de perfil" />
+    </figure>
+    <div>
+        <p>GamesMario2Play</p>
+        <span>Mario Games</span>
+        <div id="SeguirAmigoDenuncia">
+            <button class="SeguirAmigo"><a href="#">Seguir</a></button>
+            <button id="DenunciarButton"><a href="#"><img src="~/img/denunciar.png" alt="denunciar" /></a></button>
+        </div>
+    </div>
+
+</div>
+<p id="BioDoPerfil">infoweb ❤/ ifrn</p>
+<ul id="NavDoTipo">
+    <li class="TipoDePostSelecionado" id="PostsTexto"><a href="@Url.Action("OutroPerfilTexto", "MeuPerfil")">Textos</a></li>
+    <li  id="PostsMidias"><a href="@Url.Action("OutroPerfilMidia", "MeuPerfil")">Midias</a></li>
+</ul>
+<ol id="Posts" class="TipoTexto">
+    <li>
+        <a href="#">
+            <span>Phfts10</span>
+            <b>“Você atingirá o sucesso quando apresentar com orgulho as cicatrizes que adquiriu ao longo da sua jornada...</b>
+            <span>mais</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span>Phfts10</span>
+            <b>“Seja aleatório. Seja quem você é. Porque você nunca sabe quem amaria a pessoa que você esconde. A vida é u...</b>
+            <span>mais</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span>Phfts10</span>
+            <b>'Eu sei que futebol é assim mesmo, um dia a gente ganha, outro dia a gente perde, mas por que é que, quando a gente ganha, ningué...</b>
+            <span>mais</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span>Phfts10</span>
+            <b>“O talento não é tudo. Você pode tê-lo desde o berço, mas você precisa de aprender o ofício para ser o melhor.” - Cristiano Ronaldo</b>
+        </a>
+    </li>
+</ol>
+
+@Html.Partial("~/Views/MeuPerfil/Amigos.cshtml")
+
+@section styles{
+    <link href="@Url.Content("~/estilos/perfil.css")" rel="stylesheet" />
+}

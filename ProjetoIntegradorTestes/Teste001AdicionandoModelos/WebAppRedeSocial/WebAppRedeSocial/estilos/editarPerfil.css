@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div#DadosParaEditar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#Conteudo h2 {
+    text-align: center;
+    margin-bottom: 15px !important;
+    padding: 10px;
+    border-bottom: 2px solid #03A64A;
+    width: 70%;
+    font-weight: normal;
+    margin: 0 auto;
+}
+
+div#AreaFoto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+div#AreaFoto div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+div#AreaFoto div span {
+    margin-bottom: 15px;
+}
+
+div#AreaFoto div a {
+    text-decoration: none;
+    color: #03A64A;
+    padding: 4px;
+    border-radius: 7px;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+    div#AreaFoto div a:hover {
+        transform: scale(1.1);
+        color: white;
+        background-color: #03A64A;
+    }
+
+div#AreaFoto div span {
+    width: 100%;
+}
+
+
+form div.TextoForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+form div div {
+    box-sizing: border-box;
+}
+
+form div div span {
+    width: 100%;
+    text-align: end;
+    display: block;
+    color: #989898;
+}
+
+form label {
+    width: 56px;
+}
+
+form input[type="text"], textarea {
+    outline: none;
+    border: 1px solid #03A64A;
+    padding: 9px 2px;
+    width: 355px;
+}
+
+textarea {
+    resize: none;
+    width: 355px;
+    height: 9vh;
+}
+
+select {
+    outline: none;
+    padding: 5px 2px;
+    width: 355px;
+    border: 1px solid #03A64A;
+}
+
+input[type="submit"] {
+    background-color: #00A3FF;
+    border: none;
+    color: white;
+    padding: 10px 35px;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: block;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+}

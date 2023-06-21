@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhisperIF</title>
+    <link rel="icon" href="~/img/IconSite.svg" />
+    <link href="@Url.Content("~/estilos/style.css")" rel="stylesheet" />
+    @RenderSection("ScriptPage", false)
+    @RenderSection("styles", false)
+</head>
+<body>
+    
+
+    <main>
+        <nav>
+            <ul  id="CaminhosPrincipais">
+                <li id="PerfilIcone">
+                    <a href='@Url.Action("Index", "MeuPerfil")'><img src="~/img/iconperfil.png" alt="sua foto de perfil" /></a>
+                </li>
+                <li id="HomeIcone">
+                    <a href='@Url.Action("Index", "Postagens")'><img src="~/img/iconhome.png" alt="icone da home" /></a>
+                </li>
+                <li id="PesquisaIcone"><a href="#"> <img src="~/img/iconpesquisa.png" alt="icone de pesquisar"></a>
+                </li>
+                <li id="NotificarIcone">
+                    <a href='@Url.Action("Notificados", "MeuPerfil")'><img src="~/img/iconnotificacao.png" alt="icone de notificações" /></a>
+                </li>
+                <li id="EditarIcone">
+                    <a href='@Url.Action("Editar", "MeuPerfil")'><img src="~/img/iconconfiguracao.png" alt="icone de editar perfil"></a>
+                </li>
+            </ul>
+        </nav>
+        <section id="Conteudo">
+            @RenderBody()
+        </section>
+    </main>
+    
+   
+</body>
+</html>

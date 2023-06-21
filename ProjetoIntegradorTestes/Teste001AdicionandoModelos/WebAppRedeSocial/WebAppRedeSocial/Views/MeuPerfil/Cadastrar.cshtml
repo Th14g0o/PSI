@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/HeadComum.cshtml";
+}
+
+
+
+
+<div class="logo">
+    <img src="~/img/logo.png" alt="Logo">
+</div>
+<div class="form-container">
+    <form action="@Url.Action("CriarPerfil", "MeuPerfil")">
+        <div class="form-group">
+            <input type="text" id="email" name="Email" required placeholder="Email">
+            <p class="obrigatorio">*</p>
+        </div>
+        <div class="form-group">
+            <input type="text" id="matricula" name="matricula" required placeholder="Matrícula">
+            <p class="obrigatorio">*</p>
+        </div>
+        <div class="form-group">
+            <input type="password" id="senha" name="senha" required placeholder="Senha">
+            <p class="obrigatorio">*</p>
+        </div>
+        <div class="form-group">
+            <input type="password" id="senha" name="Confirmar senha" required placeholder="Confirmar senha">
+            <p class="obrigatorio">*</p>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Seguir">
+        </div>
+    </form>
+</div>
+
+@section styles{
+    <link href="@Url.Content("~/estilos/cadastrar.css")" rel="stylesheet" />
+}
+@section ScriptPage {
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("EditarIcone").classList.add("IconeFeedSelecionado");
+        }
+    </script>
+}

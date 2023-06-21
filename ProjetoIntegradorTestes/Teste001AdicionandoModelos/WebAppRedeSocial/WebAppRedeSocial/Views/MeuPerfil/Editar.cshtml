@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/FeedComum.cshtml";
+}
+
+
+
+@Html.Partial("~/Views/Grupos/Grupos.cshtml")
+<h2>Editar perfil</h2>
+<div id="DadosParaEditar">
+    <div id="AreaFoto">
+        <figure>
+            <img src="~/img/EditarPerfil.png" alt="foto de perfil">
+        </figure>
+        <div>
+            <span>phfts10</span>
+            <a href="#">alterar foto de perfil</a>
+        </div>
+    </div>
+    <form action="#">
+        <div class="TextoForm">
+            <label for="NomeEditado">Nome:</label>
+            <input type="text" id="NomeEditado" placeholder="Pedro Henrique" />
+        </div>
+        <div class="TextoForm">
+            <label for="BioEditada">Bio: </label>
+            <div>
+                <textarea maxlength="100" id="BioEditada"></textarea>
+                <span>100/100</span>
+            </div>
+        </div>
+        <div class="TextoForm">
+            <label for="Generos">Genero: </label>
+            <select id="Generos">
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+                <option value="B">Não binario</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Alterar" />
+    </form>
+</div>
+
+@Html.Partial("~/Views/MeuPerfil/Amigos.cshtml")
+
+
+@section styles{
+    <link href="@Url.Content("~/estilos/editarPerfil.css")" rel="stylesheet" />
+}
+@section ScriptPage {
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("EditarIcone").classList.add("IconeFeedSelecionado");
+        }
+    </script>
+}

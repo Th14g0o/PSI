@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a#Mais{
+    font-size: 150%;
+    color: white;
+    background-color: #03A64A;
+    padding: 2em;
+    border-radius: 100%;
+    margin-top: 8em;
+}
+#GrupoOuPostagem{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    visibility: hidden;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+}
+#GrupoOuPostagem > div{
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 35px;
+    padding-bottom: 1em;
+}
+
+.fechar{
+    background-color: transparent;
+    border: none;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    padding-right: 2em;
+    box-sizing: border-box;
+    padding-bottom: 0.3em;
+}
+.titulo{
+    color: #03A64A;
+    text-align: left;
+    width: 50%;
+    padding-left: 1em;
+    box-sizing: border-box;
+    padding-bottom: 0.3em;
+}
+
+#GrupoOuPostagem > div div{
+    border-bottom: 2px solid #03A64A;
+    width: 100%;
+    display: flex;
+    align-items:  center;
+}
+li{
+    list-style-type: none;
+}
+
+#GrupoOuPostagem > div ol{
+    width: 100%;
+    padding-left: 1em;
+    margin-top: 10px;
+}
+#GrupoOuPostagem > div ol li{
+    display: flex;
+    justify-content: left;
+    cursor: pointer;
+    align-items: center;  
+    margin-bottom: 0.5em;
+    font-size: 130%;
+    font-weight: bolder;
+}
+#GrupoOuPostagem > div ol figure{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 3px solid #03A64A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+
+
+
+#CriarPostagem{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    visibility: hidden;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+}
+#ImagemSelecionada{
+    color: transparent;
+    padding-left: 10px;
+   
+}
+#InputDaMidia{
+    display: none;
+}
+#CriarPostagem > div{
+    background-color: white;
+    padding: 15px;
+    width: 480px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+   
+}
+#CriarPostagem > div > h1{
+    width: 50%;
+    box-sizing: border-box;
+    text-align: left;
+    color: #03A64A;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+#CriarPostagem > div >button{
+    width: 50%;
+    box-sizing: border-box;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 15px;
+    
+}
+#CriarPostagem .form-area{
+    border: 2px solid #03A64A;
+    border-radius: 30px;
+    padding: 10px;
+ 
+    box-sizing: border-box;
+}
+#CriarPostagem .form-area > div{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    margin-bottom: 1em;
+   
+}
+#CriarPostagem .form-area > div figure{
+    border: 2px solid #03A64A;
+    width: 110px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 10px;
+    margin-left: 30px;
+    border-radius: 100%;
+  
+}
+
+#CriarPostagem .form-area  .bt{
+    border: none;
+    width: 245px;
+    font-size: 120%;
+    border-radius: 20px;
+    padding: 15px 50px;
+    background-color: #00A3FF;
+    color: white;
+    cursor: pointer;
+}
+#CriarPostagem .form-area  > div > div > div{
+    display: flex;
+}
+#CriarPostagem .form-area  > div > div > div span{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
+    color: #00A3FF;
+    width: min-content;
+}
+#TiposDePost{
+    visibility: hidden;
+    position: absolute;
+}
+#CriarPostagem .form-area h1{
+    width: 100%;
+    padding-left: 30px;
+    color: #03A64A;
+    margin-bottom: 10px;
+}
+#Inputs{
+    flex-wrap: wrap;
+}
+#CriarPostagem form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#CriarPostagem textarea{
+    background-color: #00A3FF;
+    width: 80%;
+    resize: none;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    height: 140px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+#CriarPostagem form{
+    display: flex;
+    justify-content: center;
+
+}

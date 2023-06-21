@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/FeedComum.cshtml";
+}
+@Html.Partial("~/Views/Grupos/Grupos.cshtml")
+<div class="noti-curtiu-txt notifica">
+    <img class="Responsavel" src="~/img/notiimg2.png" alt="">
+    <p>Pedro curtiu seu post <b>“O talento não é tudo. Você pode t...</b></p>
+</div>
+
+<div class="noti-seguiu-de-volta notifica">
+    <img class="Responsavel" src="~/img/notiimg1.png" alt="">
+    <p>Tamires te seguiu de volta <button class="button-amigo">Amigo</button> </p>
+</div>
+
+<div class="noti-comecou-a-seguir notifica">
+    <img class="Responsavel" src="~/img/notiimg3.png" alt="">
+    <p>Leila começou a te seguir, <button class="button-seguir">Seguir</button></p>
+</div>
+
+<div class="noti-curtiu-img notifica">
+
+    <img class="Responsavel" src="~/img/notiimg4.png" alt="">
+    Pablo curtiu seu post
+    <a href="@Url.Action("PostagemDetalhadaMidias", "Postagens")">
+        <img class="MidiaCurtida" src="~/img/imgcurtida.png">
+    </a>
+    
+
+</div>
+@Html.Partial("~/Views/MeuPerfil/Amigos.cshtml")
+@section styles{
+    <link href="@Url.Content("~/estilos/notificação.css")" rel="stylesheet" />
+}
+@section ScriptPage {
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("NotificarIcone").classList.add("IconeFeedSelecionado");
+        }
+    </script>
+}

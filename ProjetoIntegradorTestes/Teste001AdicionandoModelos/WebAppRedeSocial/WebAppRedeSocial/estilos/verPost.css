@@ -1,0 +1,104 @@
+/* PAGINA DE POST PERFIL */ 
+main{
+    width: 45%;
+    margin: 0 auto;
+    padding-top: 4.5em;
+}
+main #Conteudo{
+    position: relative;
+   
+    padding: 15px;
+    margin: 0 auto;
+}
+main #Conteudo #post{
+    border: none;
+}
+main #Conteudo #post .publi #btn_post button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+main #Conteudo #post .publi  .img_post{
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+main #Conteudo #post .publi  .img_post p{
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+}
+
+main #Conteudo #post .publi #btn_post  {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 2px solid #3CE900;
+    border-bottom: 2px solid #3ae90081;
+    color: #424242;
+    
+    margin-bottom: 15px;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+main #Conteudo #post .publi #btn_post div{
+    display: flex;
+    align-items: center;
+    width: min-content;
+}
+main #Conteudo #post .publi #btn_post div button {
+    margin-right: 5px;
+}
+main #Conteudo .post_comentar{
+    width:330px;
+}
+main #Conteudo #comentar{
+    align-items: center;
+    display: flex;
+    height: 50px;
+    width: 300px;
+}
+
+main #Conteudo  #comentar input{
+    width: 300px;
+    background-color: none;
+    outline: none;
+    padding: 5px;
+    border: none;
+}
+main .post_comentar .comentarios {
+display: flex;
+flex-direction: column;
+}
+main .post_comentar .comentarios div{
+display: flex;
+padding: 10px;
+align-items: center;
+}
+main .post_comentar .comentarios div p{
+margin-left: 10px;
+}
+
+#AreaDoProprietario{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    align-items: center;
+    border-bottom: #3CE900 solid 2px;
+    border-top: #3CE900 solid 2px;
+    padding: 0.5em 0;
+}
+#AreaDoProprietario a{
+    color: black;
+    text-decoration: none;
+    font-size: 120%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#AreaDoProprietario a img{
+    margin-right: 10px;
+}

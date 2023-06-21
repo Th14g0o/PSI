@@ -1,0 +1,53 @@
+
+#Conteudo div.notifica {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0 auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0.5em 0;
+}
+
+#Conteudo div button {
+    border-radius: 40px;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+}
+#Conteudo div .button-seguir{
+    background-color: #03A64A;
+    padding: 0.3em;
+}
+
+#Conteudo div .button-seguir:hover{
+    background-color: white;
+    color: #03A64A;
+}
+    #Conteudo div .button-amigo {
+        background-color: #00A3FF;
+        padding: 0.3em;
+    }
+#Conteudo div .button-amigo:hover{
+    background-color: white;
+    color: #00A3FF;
+}
+.Responsavel {
+    margin-right: 8px;
+}
+.MidiaCurtida {
+    margin-left: 15px;
+}
+.notifica {
+    border-bottom: 1px solid #03A64A;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+}
+.notifica a{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+}

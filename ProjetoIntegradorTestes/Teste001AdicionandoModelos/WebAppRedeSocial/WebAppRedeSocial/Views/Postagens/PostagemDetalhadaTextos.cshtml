@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/FeedComum.cshtml";
+}
+
+@Html.Partial("~/Views/Grupos/Grupos.cshtml")
+
+<div id="post">
+    <div class="usuario_post">
+        <div id="AreaDoProprietario">
+            <a href="#">
+                <img width="40px" src="~/img/FotoDoPerfil.png" alt="">
+                Pedro
+            </a>
+        </div>
+        <div class="publi">
+            <div class="img_post">
+                <p>
+                    “O talento não é tudo. Você pode tê-lo desde o berço, mas você precisa de aprender o ofício para ser o melhor.” - Cristiano Ronaldo
+                </p>
+            </div>
+            <div id="btn_post">
+                <div>
+                    <button> <a href=""><img src="~/img/icon mais.png" alt=""></a></button>
+                    <button><a href=""><img src="~/img/icon comentar.png" alt=""></a></button>
+                    <button><a href=""><img src="~/img/icon compartilhar.png" alt=""></a></button>
+                    <button><a href=""><img src="~/img/denunciarPorComent.png" alt=""></a></button>
+                </div>
+                <p> 2 comentarios</p>
+            </div>
+
+            <div class="post_comentar">
+                <div id="comentar">
+                    <a><img src="~/img/fontisto_smiley.png" alt=""></a>
+                    <form><input type="text" placeholder="Digite seu comentario aqui"> </form>
+
+                </div>
+                <div class="comentarios">
+                    <div> <a href=""> <img src="~/img/foto1-comentario-post.png" alt=""></a> <p> Massa! Sábio homem. </p></div>
+                    <div><a href=""> <img src="~/img/foto2-comentario-post.png" alt=""></a> <p> 👏👏👏👏</p> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("~/Views/MeuPerfil/Amigos.cshtml")
+
+@section styles{
+    <link href="@Url.Content("~/estilos/verPost.css")" rel="stylesheet" />
+}

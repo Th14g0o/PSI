@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    max-width: 700px;
+    margin: 20px auto;
+    width: 600px;
+}
+form .wrapper{
+    display: none;
+}
+.wrapper{
+display: flex;
+border-bottom: 1px solid #3CE900;
+justify-content: space-around;
+font-size: 150%;
+margin-bottom: 36px;
+padding-bottom: 10px;
+}
+#RadioDesign1{
+    background-color: #3CE900;
+}
+.wrapper div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+    cursor: pointer;
+}
+canvas{
+    width: 15px;
+    height: 15px;;
+    border: 2px solid #217D00;
+    border-radius: 100%;
+    margin-right: 10px ;
+    background-color: transparent;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-duration: 500ms;
+    
+}
+
+/* .radio{
+cursor: pointer;
+appearance: none;
+width: 15px;
+height: 15px;
+border: 1px solid #217D00;
+border-radius: 50%;
+position: relative;
+display: flex;
+align-items: center;
+margin-right: 20px;
+flex-direction: row;
+justify-content: center;
+outline: none;
+} */
+label{
+font-size: 19px;
+margin-right: 2em;
+}
+.obrigatorio{
+position: absolute;
+margin-left: 500px;
+margin-top: 0px;
+padding: 1px;
+font-size: 20px;
+color:#00A3FF;
+}
+
+.form-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 702px;
+    padding: 100px;
+    border: 1px solid #3CE900;
+    border-radius: 10px;
+    max-height: 618px;
+    box-sizing: border-box;
+}
+.form-group{
+display: flex;
+margin-bottom: 36px;
+}
+.form-group label {
+display: block;
+margin-bottom: 5px;
+color: #555555;
+} 
+.form-group input[type="text"],
+.form-group input[type="password"] {
+font-size: 20px;
+width: 100%;
+padding: 25px;
+border: 1px solid #3CE900;
+border-radius: 29px;
+outline: none;
+}
+.entrar{
+text-align: center;
+text-decoration: none;
+font-size: 20px;
+background-color: #00A3FF; 
+color: white;
+cursor: pointer;
+width: 500px;
+padding: 25px;
+border: none;
+border-radius: 29px;
+margin-top: 10px;
+}

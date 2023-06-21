@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/HeadComum.cshtml";
+}
+
+<div class="logo">
+    <img src="~/img/logo.png" alt="Logo">
+</div>
+<div class="form-container">
+    <div class="wrapper">
+        <div onclick="javascript:PorMatricula()">
+            <canvas id="RadioDesign1"></canvas>
+            <p>Matricula</p>
+        </div>
+        <div onclick="javascript:PorEmail()">
+            <canvas id="RadioDesign2"></canvas>
+            <p>Email</p>
+        </div>
+    </div>
+    <form action="@Url.Action("Index", "Postagens")">
+        <div class="wrapper">
+            <div>
+                <input class="radio" name="theradio" id="radio1" type='radio' checked />
+                <label for="radio1">Matricula</label>
+            </div>
+            <div>
+                <input class="radio" name="theradio" id="radio2" type='radio' />
+                <label for="radio2">Email</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="matricula" name="matricula" required placeholder="Matrícula">
+            <p class="obrigatorio">*</p>
+        </div>
+        <div class="form-group">
+            <input type="password" id="senha" name="senha" required placeholder="Senha">
+            <p class="obrigatorio">*</p>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="entrar" value="Entrar" />
+        </div>
+    </form>
+</div>
+
+@section styles{
+    <link href="@Url.Content("~/estilos/login.css")" rel="stylesheet" />
+}
+@section ScriptPage {
+    <script src="@Url.Content("~/scripts/FormulariosDeEntrada.js")"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("EditarIcone").classList.add("IconeFeedSelecionado");
+        }
+    </script>
+}

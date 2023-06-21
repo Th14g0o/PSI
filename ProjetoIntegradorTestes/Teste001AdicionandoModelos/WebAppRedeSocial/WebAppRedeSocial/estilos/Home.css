@@ -1,0 +1,56 @@
+/* Form feeed Geral e de Amigos */
+ul#PostsVisiveis{
+  background-color: white;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  top: 75px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+ul#PostsVisiveis li a{
+  text-decoration: none;
+  padding: 10px 0;
+  color: black;
+  font-size: 125%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul#PostsVisiveis li{
+  list-style-type: none;
+  transition-duration: 350ms;
+  transition-timing-function: linear;
+  transition-property: background-color;
+  width: 22%;
+  box-sizing: border-box;
+}
+ul#PostsVisiveis li:hover{
+  background-color: rgba(60, 233, 0, 0.5);
+}
+ul#PostsVisiveis li:hover a{
+  color: white !important;
+}
+.PostsVisiveisNoFeed{
+  color: rgb(60, 233, 0) !important;
+}
+#PostVisiveisFeedForm{
+  display: none;
+}
+
+
+/* button que aciona modal */
+.adcionar_publi {
+    position: absolute;
+    right: 27%;
+    bottom: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: 1s;
+}
+
+

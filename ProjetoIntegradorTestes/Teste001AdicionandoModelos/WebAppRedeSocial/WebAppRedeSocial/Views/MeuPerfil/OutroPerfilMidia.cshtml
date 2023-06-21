@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = "~/Views/Compartilhado/FeedComum.cshtml";
+}
+
+@Html.Partial("~/Views/Grupos/Grupos.cshtml")
+
+<div id="AreaDeFotoNome">
+    <figure>
+        <img src="~/img/FotoDoPerfil.png" alt="sua foto de perfil" />
+    </figure>
+    <div>
+        <p>GamesMario2Play</p>
+        <span>Mario Games</span>
+        <div id="SeguirAmigoDenuncia">
+            <button class="SeguirAmigo"><a href="#">Seguir</a></button>
+            <button id="DenunciarButton"><a href="#"><img src="~/img/denunciar.png" alt="denunciar" /></a></button>
+        </div>
+    </div>
+
+</div>
+<p id="BioDoPerfil">infoweb ❤/ ifrn</p>
+<ul id="NavDoTipo">
+    <li id="PostsTexto"><a href="@Url.Action("OutroPerfilTexto", "MeuPerfil")">Textos</a></li>
+    <li class="TipoDePostSelecionado" id="PostsMidias"><a href="@Url.Action("OutroPerfilMidia", "MeuPerfil")">Midias</a></li>
+</ul>
+<ol id="Posts">
+    <li><a href="#"><img src="~/img/midia01.png" alt="Midia 001" /></a></li>
+    <li><a href="#"><img src="~/img/midia02.png" alt="Midia 002" /></a></li>
+    <li><a href="#"><img src="~/img/midia03.png" alt="Midia 003" /></a></li>
+</ol>
+
+@Html.Partial("~/Views/MeuPerfil/Amigos.cshtml")
+
+@section styles{
+    <link href="@Url.Content("~/estilos/perfil.css")" rel="stylesheet" />
+}
