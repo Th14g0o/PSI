@@ -46,16 +46,7 @@
         <h1>Criar Post</h1>
         <button onclick="javascript:FecharPostagemModal()"><img src="~/img/FecharCriarIcone.png" alt="" /></button>
         <div class="form-area">
-            <div>
-                <figure>
-                    <img src="~/img/CriarMidiaIcone.png" alt="">
-                </figure>
-                <button class="bt">Selecionar tipo</button>
-                <ol id="TiposDePost">
-                    <li><button>Midias</button></li>
-                    <li><button>Textos</button></li>
-                </ol>
-            </div>
+           
 
             <div>
                 <figure>
@@ -64,7 +55,7 @@
                 <div>
                     <div>
                         <button class="bt" onclick="javascript:AbrirArquivos()">Selecionar midia</button>
-                        <span>*</span>
+
                     </div>
                     <span id="ImagemSelecionada">Foto:</span>
 
@@ -75,7 +66,7 @@
             <div id="Inputs">
                 <h1>Descrição Da Postagem</h1>
                 <form action="#">
-                    <input required type="file" id="InputDaMidia" />
+                    <input type="file" id="InputDaMidia" />
                     <textarea></textarea>
                     <input class="bt" type="submit" value="Publicar" />
                 </form>
