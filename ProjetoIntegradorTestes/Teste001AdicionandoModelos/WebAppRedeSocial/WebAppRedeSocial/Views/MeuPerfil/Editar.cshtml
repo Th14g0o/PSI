@@ -14,10 +14,11 @@
         </figure>
         <div>
             <span>phfts10</span>
-            <a href="#">alterar foto de perfil</a>
+            <a href="javascript:AbrirArquivos()">alterar foto de perfil</a>
         </div>
     </div>
     <form action="#">
+        <input type="file" id="ColocarFotoDePerfil" />
         <div class="TextoForm">
             <label for="NomeEditado">Nome:</label>
             <input type="text" id="NomeEditado" placeholder="Pedro Henrique" />
@@ -47,8 +48,10 @@
 
 @section styles{
     <link href="@Url.Content("~/estilos/editarPerfil.css")" rel="stylesheet" />
+
 }
 @section ScriptPage {
+    <script src="@Url.Content("~/scripts/FormulariosDeEntrada.js")"></script>
     <script type="text/javascript">
         window.onload = function () {
             document.getElementById("EditarIcone").classList.add("IconeFeedSelecionado");

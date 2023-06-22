@@ -101,6 +101,9 @@ select {
     width: 355px;
     border: 1px solid #03A64A;
 }
+#ColocarFotoDePerfil {
+    display: none;
+}
 
 input[type="submit"] {
     background-color: #00A3FF;
