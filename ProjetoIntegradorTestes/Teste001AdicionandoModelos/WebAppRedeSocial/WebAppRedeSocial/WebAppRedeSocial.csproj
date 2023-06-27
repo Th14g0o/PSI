@@ -196,6 +196,7 @@
     <Content Include="Views\Postagens\PostagemDetalhadaTextos.cshtml" />
     <Content Include="Views\MeuPerfil\OutroPerfilMidia.cshtml" />
     <Content Include="Views\MeuPerfil\OutroPerfilTexto.cshtml" />
+    <Content Include="Views\Usuarios\Cadastrar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -206,7 +207,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Entrada\" />
-    <Folder Include="Views\Usuarios\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

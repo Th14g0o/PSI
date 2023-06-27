@@ -9,8 +9,10 @@ namespace WebAppRedeSocial.Controllers
 {
     public class UsuariosController : Controller
     {
+
         // GET: Usuarios
         BancoDeDados bd = new BancoDeDados();
+        Usuario atual = new Usuario();
         // GET: MeuPerfil
         public ActionResult MeuPerfilMidias()
         {
@@ -28,6 +30,11 @@ namespace WebAppRedeSocial.Controllers
         {
             return View();
         }
+        public ActionResult Cadastrar()
+        {
+            return View();
+        }
+        [HttpPost]
         public ActionResult Cadastrar()
         {
             return View();
