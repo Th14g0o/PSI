@@ -15,6 +15,7 @@ namespace WebAppProjetoB2023.Controllers
     public class CategoriasController : Controller
     {
 
+        //EFContext context = new EFContext();
         
         // GET: Categorias
         public ActionResult Index()
