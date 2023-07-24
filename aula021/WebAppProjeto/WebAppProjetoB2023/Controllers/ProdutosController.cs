@@ -11,7 +11,6 @@ using Modelo.Tabelas;
 using Modelo.Cadastros;
 using Servico.Cadastros;
 using Servico.Tabelas;
-
 namespace WebAppProjetoB2023.Controllers
 {
     //MVC witch read/write ja cria o post com os http get e post
@@ -85,6 +84,9 @@ namespace WebAppProjetoB2023.Controllers
         {
             return ObterVisaoProdutoPorId(id);
         }
+
+
+
         [HttpPost]
         public ActionResult Create(Produto produto)
         {
