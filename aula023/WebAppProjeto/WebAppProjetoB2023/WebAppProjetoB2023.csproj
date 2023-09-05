@@ -246,6 +246,7 @@
     <Content Include="Views\Produtos\_PartialDetailsContentPanel.cshtml" />
     <Content Include="Views\Fabricantes\PanelEditDelete.cshtml" />
     <Content Include="Views\Categorias\PanelEditDelete.cshtml" />
+    <Content Include="Views\Produtos\_PartialEditContentPanel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
