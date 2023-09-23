@@ -6,3 +6,6 @@
   <img src="https://img.shields.io/badge/-HTML-orange?logo=html5&logoColor=white&style=for-the-badge" alt="HTML" />
   <img src="https://img.shields.io/badge/-CSS-blue?logo=css3&logoColor=white&style=for-the-badge" alt="CSS" />
 </p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Microsoft%20SQL%20Sever-white?logo=microsoftsqlserver&logoColor=CC2927&style=for-the-badge" alt="Visual Studio" />
+</p>
