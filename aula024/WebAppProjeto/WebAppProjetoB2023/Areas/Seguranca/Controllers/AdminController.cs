@@ -132,12 +132,12 @@ namespace WebAppProjetoB2023.Areas.Seguranca.Controllers
                 IdentityResult result = GerenciadorUsuario.Delete(user);
                 if (result.Succeeded)
                 {
+                    TempData["Message"] = "O USUARIO " + user.UserName.ToUpper() + " FOI REMOVIDO";
                     return RedirectToAction("Index");
                 }
                 else
                 {
-                    return new HttpStatusCodeResult(
-                    HttpStatusCode.BadRequest);
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
                 }
             }
             else
