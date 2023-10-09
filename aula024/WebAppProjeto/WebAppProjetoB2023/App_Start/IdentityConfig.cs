@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using WebAppProjetoB2023.DAL;
+using WebAppProjetoB2023.Infraestrutura;
 
 namespace WebAppProjetoB2023
 {
@@ -16,6 +17,7 @@ namespace WebAppProjetoB2023
         {
             app.CreatePerOwinContext<IdentityDbContextAplicacao>(IdentityDbContextAplicacao.Create);
             app.CreatePerOwinContext<GerenciadorUsuario>(GerenciadorUsuario.Create);
+            app.CreatePerOwinContext<GerenciadorPapel>(GerenciadorPapel.Create);
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,

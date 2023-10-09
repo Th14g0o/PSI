@@ -53,6 +53,7 @@ namespace WebAppProjetoB2023.Areas.Cadastros.Controllers
             }
         }
         // GET: Produtos
+        [Authorize]
         public ActionResult Index()
         {
             //var produtos = context.Produtos.Include(c => c.Categoria). // Acesso ao contexto
