@@ -12,6 +12,8 @@ namespace WebAppProjetoB2023.Areas.Seguranca.Controllers
 {
     public class AdminController : Controller
     {
+        //Identity tem tres tabelas, a a para usuarios, papeis(funções, permissoes) e associarção de papel e usuarios
+
         // Definição da Propriedade GerenciadorUsuario
         private GerenciadorUsuario GerenciadorUsuario
         {
@@ -21,15 +23,6 @@ namespace WebAppProjetoB2023.Areas.Seguranca.Controllers
 
             }
         }
-        // GET: Seguranca/Admin
-        public ActionResult Index()
-        {
-            return View(GerenciadorUsuario.Users);
-        }
-        public ActionResult Create()
-        {
-            return View();
-        }
         private void AddErrorsFromResult(IdentityResult result)
         {
             foreach (string error in result.Errors)
@@ -37,6 +30,18 @@ namespace WebAppProjetoB2023.Areas.Seguranca.Controllers
                 ModelState.AddModelError("", error);
             }
         }
+        // GET: Seguranca/Admin
+        [Authorize(Roles = "Administradores")]
+        public ActionResult Index()
+        {
+            return View(GerenciadorUsuario.Users);
+        }
+        [Authorize(Roles = "Administradores")]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [Authorize(Roles = "Administradores")]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -55,6 +60,7 @@ namespace WebAppProjetoB2023.Areas.Seguranca.Controllers
             uvm.Email = usuario.Email;
             return View(uvm);
         }
+        [Authorize(Roles = "Administradores")]
         public ActionResult Details(string id)
         {
             if (id == null)

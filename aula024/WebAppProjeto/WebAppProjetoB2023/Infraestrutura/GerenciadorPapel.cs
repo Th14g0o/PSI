@@ -21,5 +21,6 @@ namespace WebAppProjetoB2023.Infraestrutura
             return new GerenciadorPapel(new RoleStore<Papel>
             (context.Get<IdentityDbContextAplicacao>()));
         }
+
     }
 }

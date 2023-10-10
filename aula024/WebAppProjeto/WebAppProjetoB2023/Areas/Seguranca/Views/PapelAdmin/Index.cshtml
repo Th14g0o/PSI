@@ -40,14 +40,12 @@
                                 @string.Join(", ", role.Users.Select
                             (x => Html.GetUserName(x.UserId)))
 
-                            </p>                }
+                            </p>}
                     </td>
                     <td>
-                        @using (Html.BeginForm("Delete", "PapelAdmin",
-                        new { id = role.Id }))
+                        @using (Html.BeginForm("Delete", "PapelAdmin",new { id = role.Id }))
                         {
-                            @Html.ActionLink("Alterar", "Edit", new { id = role.Id },
-                            new { @class = "btn btn-primary btn-xs" })
+                            @Html.ActionLink("Alterar", "Edit", new { id = role.Id }, new { @class = "btn btn-primary btn-xs" })
                             <button class="btn btn-danger btn-xs" type="submit">
                                 Delete
                             </button>
@@ -60,3 +58,11 @@
 </div>
 @Html.ActionLink("Criar um novo papel", "Create", null,
 new { @class = "btn btn-primary" })
+@section ScriptPage {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li').removeClass("active");
+            $('#liPapels').addClass("active");
+        });
+    </script>
+}

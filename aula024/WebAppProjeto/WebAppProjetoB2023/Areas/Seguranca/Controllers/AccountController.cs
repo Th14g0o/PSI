@@ -28,6 +28,12 @@ namespace WebAppProjetoB2023.Areas.Seguranca.Controllers
                 return HttpContext.GetOwinContext().GetUserManager<GerenciadorUsuario>();
             }
         }
+
+        public ActionResult Logout()
+        {
+            AuthManager.SignOut();
+            return RedirectToAction("Index", "Homes", new { area = "" });
+        }
         // Metodos
         public ActionResult Login(string returnUrl)
         {
@@ -53,7 +59,7 @@ namespace WebAppProjetoB2023.Areas.Seguranca.Controllers
                     AuthManager.SignIn(new AuthenticationProperties
                     { IsPersistent = false }, ident);
                     if (returnUrl == null)
-                        returnUrl = "/Home";
+                        returnUrl = "/Homes"; // caminho inicial de login
                     return Redirect(returnUrl);
                 }
             }
