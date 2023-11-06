@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Modelo.Cadastros;
+using Modelo.Carrinho;
 using Servico.Cadastros;
+
 
 namespace WebAppProjetoB2023.Areas.Carrinho.Controllers
 {
@@ -36,9 +38,9 @@ namespace WebAppProjetoB2023.Areas.Carrinho.Controllers
         {
             List<ItemCarrinho> carrinho = HttpContext.Session["carrinho"] as
             List<ItemCarrinho>;
-            var produto2 = produtoServico.ObterProdutoPorId(
-            Convert.ToInt32(collection.Get("ItemCarrinhoId")));
-            var qtd = Convert.ToInt32(collection.Get("Quantidade"));
+            var produto2 = produtoServico.ObterProdutoPorId(Convert.ToInt32(collection.Get("ItemCarrinhoId")));
+            var qtd = 0;
+            int.TryParse(collection.Get("Quantidade"), out qtd);
             var itemCarrinho = new ItemCarrinho()
             {
                 Produto = produto2,

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Modelo.Cadastros
+using Modelo.Cadastros;
+namespace Modelo.Carrinho
 {
     public class ItemCarrinho
     {
