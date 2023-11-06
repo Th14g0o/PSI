@@ -1,0 +1,105 @@
+﻿@using WebAppProjetoB2023.Infraestrutura
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+          charset="utf-8" />
+    @*<title>@ViewBag.Title</title>*@
+    <title>Games Ztore</title>
+    <link href="@Url.Content("~/content/bootstrap.css")" rel="stylesheet" />
+    <link rel="icon" href="~/Views/Shared/icon.png" />
+
+    @RenderSection("styles", false);
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            @*style="background-color: #fce4ec;"*@
+            
+            <div class="page-header bg-info">
+                <div>
+                    <h1>
+                        Desenvolvimento em ASP NET MVC
+                        <small class="text-danger">
+                            Utilizando o Bootstrap
+                        </small>
+                    </h1>
+                </div><div style="text-align:right;">
+                    @{
+                        if (Html.GetAuthenticatedUser().ToString() != "")
+                        {
+                            @Html.GetAuthenticatedUser();
+                            @Html.ActionLink(" - Sair", "Logout", "Account",
+                            new { area = "Seguranca" }, null)
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Acessar", "Login", "Account",
+                            new { area = "Seguranca" }, null);
+
+                        }
+                    }
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+            <div class="row">
+                <div class="col-xs-3 col-md-3 bg-info">
+                    <ul class="nav nav-pills nav-stacked" style="padding: 0.3em;">
+                        <!--<li id="liHome" role="presentation" class="active"><a href="#">Home</a></li>-->
+                        <li id="liHome" role="presentation">
+                            @Html.ActionLink("Home", "Index", "Homes", new { Area = "" }, null)
+                        </li>
+
+                        <li id="liCategorias" role="presentation">
+                            @Html.ActionLink("Categorias",
+    "Index", "Categorias", new { Area = "Tabelas" }, null)
+                        </li>
+                        <li id="liFabricantes" role="presentation">
+                            @Html.ActionLink("Fabricantes",
+    "Index", "Fabricantes", new { Area = "Cadastros" }, null)
+                        </li>
+                        <li id="liProdutos" role="presentation">
+                            @Html.ActionLink("Produtos", "Index",
+    "Produtos", new { Area = "Cadastros" }, null)
+                        </li>
+                        <li id="liCarrinho" role="presentation">
+                            @Html.ActionLink("Carrinho",
+    "Create", "Carrinhos", new { Area = "Carrinho" }, null)
+                        </li>
+                        <li id="liUsuarios" role="presentation">
+                            @Html.ActionLink("Usuarios",
+    "Index", "Admin", new { Area = "Seguranca" }, null)
+                        </li>
+                        <li id="liPapels" role="presentation">
+                            @Html.ActionLink("Papeis",
+    "Index", "PapelAdmin", new { Area = "Seguranca" }, null)
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-9 col-md-9">
+                    <br />
+                    @RenderBody()
+                </div>
+            </div> <br />
+            <div class="row">
+                <div class="col-xs-12 col-md-12 bg-info">
+                    <small>Layout com Bootstrap</small>
+                </div>
+            </div>
+        </div>
+    <script src="@Url.Content("~/scripts/jquery-2.2.4.js")"></script>
+    <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")">
+    </script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")">
+    </script>
+
+    @RenderSection("ScriptPage", false);
+</body>
+</html>
