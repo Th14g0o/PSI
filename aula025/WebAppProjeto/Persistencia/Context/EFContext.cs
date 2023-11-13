@@ -7,6 +7,7 @@ using Modelo.Tabelas;
 using Modelo.Cadastros;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Persistencia.Migrations;
+using Modelo.Carrinho;
 
 namespace Persistencia.Context
 {
@@ -21,6 +22,7 @@ namespace Persistencia.Context
         public DbSet<Categoria> Categorias { get; set; } // faz uma tabela com base na classe Categoria
         public DbSet<Fabricante> Fabricantes { get; set; }
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<ItemPedido> ItemPedidos { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //base.OnModelCreating(modelBuilder);
