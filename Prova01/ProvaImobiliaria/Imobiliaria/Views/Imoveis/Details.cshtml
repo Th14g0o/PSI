@@ -1,0 +1,57 @@
+﻿@model Imobiliaria.Models.Imovel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Imovel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Valor)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Valor)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TipoId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tipo.TipoOpera)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tipo.TipoOpera) -  @Html.DisplayFor(model => model.Tipo.Nome)
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ImovelId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
